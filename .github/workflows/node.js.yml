@@ -20,7 +20,7 @@ jobs:
     - run: npm ci
     - id: collect
       run: |
-        echo "current_date=$(npm run collect | grep "Write data for" | cut -c 16-31)" >> $GITHUB_ENV
+        echo "current_date=$(npm run collect -- ${{ secrets.OPENWEATERHMAP_API_KEY }} 48.5428 16.7606 zistersdorf | grep "Write data for" | cut -c 16-31)" >> $GITHUB_ENV
 
     - name: Commit changes to repository
       uses: EndBug/add-and-commit@v7
