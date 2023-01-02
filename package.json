@@ -1,0 +1,20 @@
+{
+  "name": "openweathermap-collector",
+  "version": "0.0.1",
+  "description": "Collect hourly openweathermap measurements with Github actions",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "collect": "node bin/collect.js",
+    "lint": "eslint .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Clemens Solar",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "8.6.0",
+    "eslint-config-google": "0.14.0"
+  }
+}
